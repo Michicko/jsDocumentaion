@@ -1,0 +1,240 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.primary-heading {
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+@media only screen and (max-width: 75em) {
+  .primary-heading {
+    font-size: 2.1rem;
+  }
+}
+
+.secondary-heading {
+  font-weight: 300;
+  font-size: 2.2rem;
+}
+
+@media only screen and (max-width: 75em) {
+  .secondary-heading {
+    font-size: 2.2rem;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  font-family: Verdana, sans-serif;
+  color: #333;
+}
+
+.statement {
+  color: blue;
+}
+
+.number {
+  color: red;
+}
+
+.string {
+  color: brown;
+}
+
+.comment {
+  color: green;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 50em) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.container .nav {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25vw;
+          flex: 0 0 25vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25vw;
+  height: 100%;
+  background-color: #f1f1f1;
+  overflow-y: auto;
+}
+
+@media only screen and (max-width: 50em) {
+  .container .nav {
+    width: 100%;
+    height: 25vh;
+    z-index: 1;
+    -webkit-box-shadow: 1px 0 1px rgba(0, 0, 0, 0.8);
+            box-shadow: 1px 0 1px rgba(0, 0, 0, 0.8);
+  }
+}
+
+.container .nav-heading {
+  text-align: left;
+  text-transform: capitalize;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+  margin-left: 4rem;
+}
+
+@media only screen and (max-width: 75em) {
+  .container .nav-heading {
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .container .nav-heading {
+    text-align: center;
+  }
+}
+
+.container .nav-items {
+  list-style: none;
+}
+
+.container .nav-items .nav-item {
+  margin-bottom: 1rem;
+}
+
+.container .nav-items .nav-link {
+  display: block;
+}
+
+.container .nav-items .nav-link:link, .container .nav-items .nav-link:visited {
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #333;
+  width: 100%;
+  padding-left: 4rem;
+  padding-top: .4rem;
+  padding-bottom: .4rem;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+.container .nav-items .nav-link:hover, .container .nav-items .nav-link:focus, .container .nav-items .nav-link:active {
+  background-color: #A8DADC;
+}
+
+.container .main-doc {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 25vw;
+  position: relative;
+  padding: 6rem 4rem;
+}
+
+@media only screen and (max-width: 50em) {
+  .container .main-doc {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 25vh;
+  }
+}
+
+.container .main-doc > *:not(:last-child) {
+  margin-bottom: 4rem;
+}
+
+.container .main-doc .main-section > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.container .main-doc .main-section_link:link, .container .main-doc .main-section_link:visited {
+  color: #1D3557;
+  text-decoration: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.container .main-doc .main-section_link:hover, .container .main-doc .main-section_link:active {
+  color: #457B9D;
+}
+
+.container .main-doc .main-section_article > *:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.container .main-doc .main-section-heading {
+  text-transform: capitalize;
+}
+
+.container .main-doc .main-section_items {
+  list-style: none;
+  padding-left: 4rem;
+}
+
+.container .main-doc .main-section_item {
+  position: relative;
+}
+
+.container .main-doc .main-section_item::before {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -2rem;
+  content: "";
+  -webkit-mask-image: url(../img/chevron-forward-outline.svg);
+          mask-image: url(../img/chevron-forward-outline.svg);
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  height: 2rem;
+  width: 2rem;
+  background-color: #A8DADC;
+}
+
+.container .main-doc .main-section_item > * {
+  padding-left: 4rem;
+}
+
+.container .main-doc .main-section_item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.container .main-doc .code-container {
+  background-color: #f1f1f1;
+  padding: 4rem 3rem;
+  font-size: 2rem;
+}
+
+.container .main-doc .code-container .main-section_code {
+  background-color: #fff;
+  display: block;
+  min-height: 10rem;
+  padding: 1rem;
+}
