@@ -35,14 +35,14 @@ html {
 
 @media only screen and (max-width: 75em) {
   html {
-    font-size: 50%;
+    font-size: 55%;
   }
 }
 
 body {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 300;
-  line-height: 1.2;
+  line-height: 1.5;
   font-family: Verdana, sans-serif;
   color: #333;
 }
@@ -206,7 +206,7 @@ body {
 .container .main-doc .main-section_item::before {
   display: inline-block;
   position: absolute;
-  top: 0;
+  top: .2rem;
   left: -2rem;
   content: "";
   -webkit-mask-image: url(../img/chevron-forward-outline.svg);
